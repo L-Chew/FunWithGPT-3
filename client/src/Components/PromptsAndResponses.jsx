@@ -3,8 +3,7 @@ import { useMainContext } from './MainProvider.jsx';
 import PromptsAndResponsesEntry from './PromptsAndResponsesEntry.jsx';
 
 function PromptsAndResponses(props) {
-  const { prompt, setPrompt, allPromptsAndResponses, setAllPromptsAndResponses } = useMainContext();
-  console.log('allPrompts: ', allPromptsAndResponses);
+  const { allPromptsAndResponses } = useMainContext();
 
   return (
     <>

@@ -3,7 +3,6 @@ import axios from 'axios';
 import {openAIKey} from '../../../config';
 import { useMainContext } from './MainProvider.jsx';
 
-
 function Form(props) {
   const { prompt, setPrompt, allPromptsAndResponses, setAllPromptsAndResponses } = useMainContext();
 
@@ -22,8 +21,8 @@ function Form(props) {
           headers: {
             'Content-Type': 'application/json',
             'Authorization': `Bearer ${openAIKey}`,
-            'Access-Control-Allow-Origin' : '*',
-            'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS'
+            'Access-Control-Allow-Origin' : 'https://confluence-open-api.herokuapp.com',
+            'Access-Control-Allow-Methods':'GET, POST'
           }
         })
         if (request.status === 200) {
