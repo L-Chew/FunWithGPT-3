@@ -7,10 +7,14 @@ import styled from 'styled-components';
 const StyledTitle = styled.h1 `
   display: flex;
   flex-direction: column;
-  background-color: rgba(225, 203, 255, 0.851);
+  background-color: rgba(247, 222, 255, 0.851);
   text-align: center;
   font-family: fantasy;
+  font-size: 45px;
+  text-shadow: 2px 5px rgb(181, 208, 251);
   font-weight: bolder;
+  padding: 10px 0 5px 0;
+  color: white;
 `;
 
 const App = () => {
