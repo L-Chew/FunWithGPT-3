@@ -28,7 +28,7 @@ function Form(props) {
           console.log(request)
           console.log('prompt: ', prompt)
           let data = allPromptsAndResponses;
-          data.push([prompt.prompt, `${request.data.choices[0].text}`])
+          data.push([[prompt.prompt, `${request.data.choices[0].text}`]])
           setAllPromptsAndResponses(data);
           setPrompt({prompt: ''});
         }

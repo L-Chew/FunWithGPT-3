@@ -1,5 +1,6 @@
 import React from 'react';
 import { useMainContext } from './MainProvider.jsx';
+import PromptsAndResponsesEntry from './PromptsAndResponsesEntry.jsx';
 
 function PromptsAndResponses(props) {
   const { prompt, setPrompt, allPromptsAndResponses, setAllPromptsAndResponses } = useMainContext();
@@ -7,7 +8,7 @@ function PromptsAndResponses(props) {
 
   return (
     <>
-      <> {allPromptsAndResponses.map((list, i) => (<div key={i}>{list[0]}</div>))} </>
+      <> {allPromptsAndResponses.map((set, i) => (<div key={i} set={set}/>)).map((entry, j) => (<PromptsAndResponsesEntry key={j} entry={entry}/>))} </>
     </>
   )
 }
