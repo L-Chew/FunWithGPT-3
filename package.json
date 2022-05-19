@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack -w",
-    "start": "nodemon server/index.js"
+    "start": "nodemon server/index.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -17,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/L-Chew/FunWithGPT-3/issues"
   },
-  "homepage": "https://github.com/L-Chew/FunWithGPT-3#readme",
+  "homepage": "https://github.com/L-Chew/FunWithGPT-3/",
   "dependencies": {
     "@babel/preset-react": "^7.17.12",
     "axios": "^0.27.2",
@@ -31,6 +33,7 @@
     "@babel/core": "^7.17.12",
     "@babel/preset-env": "^7.17.12",
     "babel-loader": "^8.2.5",
+    "gh-pages": "^4.0.0",
     "webpack": "^5.72.1",
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.9.0"
