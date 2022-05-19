@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import axios from 'axios';
 import { openAIKey } from '../../../config';
-import { useMainContext } from './MainProvider.jsx';
+import { useMainContext } from './hooks/MainProvider.jsx';
 import styled from 'styled-components';
 
 const StyledForm = styled.form `

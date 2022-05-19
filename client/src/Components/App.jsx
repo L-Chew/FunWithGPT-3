@@ -1,5 +1,5 @@
 import React from 'react';
-import MainProvider from './MainProvider.jsx';
+import MainProvider from './hooks/MainProvider.jsx';
 import Form from './Form.jsx';
 import PromptsAndResponses from './PromptsAndResponses.jsx';
 import styled from 'styled-components';

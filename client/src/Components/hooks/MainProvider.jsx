@@ -1,4 +1,5 @@
 import React, { useState, useContext } from 'react';
+import useLocalStorage from './useLocalStorage.jsx';
 
 const MainContext = React.createContext();
 
@@ -8,7 +9,7 @@ export function useMainContext() {
 
 export default function MainProvider({ children }) {
   const [prompt, setPrompt] = useState({prompt: ''});
-  const [allPromptsAndResponses, setAllPromptsAndResponses] = useState([]);
+  const [allPromptsAndResponses, setAllPromptsAndResponses] = useLocalStorage('PR', []);
 
   return (
     <MainContext.Provider value={{ prompt, setPrompt, allPromptsAndResponses, setAllPromptsAndResponses }}>
