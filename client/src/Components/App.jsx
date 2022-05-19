@@ -1,11 +1,16 @@
 import React from 'react';
 import Form from './Form.jsx';
+import MainProvider from './MainProvider.jsx';
+import PromptsAndResponses from './PromptsAndResponses.jsx';
 
 const App = () => {
   return (
     <>
-      <h1>Fun with AI</h1>
-      <Form />
+      <MainProvider>
+        <h1>Fun with AI</h1>
+        <Form />
+        <PromptsAndResponses />
+      </MainProvider>
     </>
   )
 }
