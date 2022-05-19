@@ -1,14 +1,13 @@
 # FunWithGPT-3
 
-## Description:
+## Description
 An application that sends plain text prompts to the OpenAI API and displays the results in a list.
 
-## Obtain API Key:
+## Obtain API Key
 - Go to https://beta.openai.com/signup
 - Enter your email address and password
 - Verify your email address
 - Verify your phone number by entering the code that is sent to you via SMS
-
 
 ## Available Scripts
 
@@ -32,8 +31,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 ### `npm run build`
 
 It correctly bundles React in production mode.
-
-
 
 ## Technologies Used
 
