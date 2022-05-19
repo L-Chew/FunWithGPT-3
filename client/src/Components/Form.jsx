@@ -11,7 +11,7 @@ const StyledForm = styled.form `
 `;
 
 const StyledSubmit = styled.input `
-  background-color: rgba(195, 234, 255, 0.8);
+  background-color: rgba(255, 195, 250, 0.5);
 `;
 
 function Form(props) {
@@ -42,6 +42,7 @@ function Form(props) {
       console.log(err);
     });
   }
+
   return (
     <>
       <StyledForm onSubmit={handleSubmit}>
