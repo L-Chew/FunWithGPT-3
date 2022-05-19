@@ -1,8 +1,7 @@
 import React from 'react';
-import Form from './Form.jsx';
 import MainProvider from './MainProvider.jsx';
+import Form from './Form.jsx';
 import PromptsAndResponses from './PromptsAndResponses.jsx';
-import PromptsAndResponsesEntry from './PromptsAndResponsesEntry.jsx';
 
 const App = () => {
   return (
