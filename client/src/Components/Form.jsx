@@ -21,7 +21,9 @@ function Form(props) {
         let request = await axios.post('https://api.openai.com/v1/engines/text-curie-001/completions', prompt, {
           headers: {
             'Content-Type': 'application/json',
-            'Authorization': `Bearer ${openAIKey}`
+            'Authorization': `Bearer ${openAIKey}`,
+            'Access-Control-Allow-Origin' : '*',
+            'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS'
           }
         })
         if (request.status === 200) {
