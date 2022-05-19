@@ -26,21 +26,27 @@ function Form(props) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    axios.post('https://api.openai.com/v1/engines/text-curie-001/completions', prompt, {
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${openAIKey}`
+    async function postData() {
+      try {
+        let request = await axios.post('https://api.openai.com/v1/engines/text-curie-001/completions', prompt, {
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${openAIKey}`,
+            'Access-Control-Allow-Origin' : 'https://confluence-open-api.herokuapp.com',
+            'Access-Control-Allow-Methods':'GET, POST'
+          }
+        })
+        if (request.status === 200) {
+          let data = allPromptsAndResponses;
+          data.unshift([[prompt.prompt, `${request.data.choices[0].text}`]])
+          setAllPromptsAndResponses(data);
+          setPrompt({prompt: ''});
+        }
+      } catch(err) {
+        console.log(err);
       }
-    })
-    .then((res) => {
-      let data = allPromptsAndResponses;
-      data.unshift([[prompt.prompt, `${res.data.choices[0].text}`]])
-      setAllPromptsAndResponses(data);
-      setPrompt({prompt: ''});
-    })
-    .catch((err) => {
-      console.log(err);
-    });
+    }
+    postData();
   }
 
   return (
