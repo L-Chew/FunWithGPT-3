@@ -34,7 +34,7 @@ function Form(props) {
     })
     .then((res) => {
       let data = allPromptsAndResponses;
-      data.push([[prompt.prompt, `${res.data.choices[0].text}`]])
+      data.unshift([[prompt.prompt, `${res.data.choices[0].text}`]])
       setAllPromptsAndResponses(data);
       setPrompt({prompt: ''});
     })
